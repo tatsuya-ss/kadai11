@@ -54,6 +54,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SDU-So-0tS" secondAttribute="trailing" constant="50" id="i06-lL-uOE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="prefectureLabel" destination="2QO-6n-Dgq" id="vSp-Ic-w2k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,6 +101,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="6Gw-RB-mu4" kind="unwind" identifier="exit" unwindAction="exitWithSegue:" id="8iF-Lj-FgP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIz-kt-iiw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="6Gw-RB-mu4" userLabel="Exit" sceneMemberID="exit"/>

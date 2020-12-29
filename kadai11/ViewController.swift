@@ -8,15 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
+    
+    @IBOutlet private var prefectureLabel: UILabel!
+    
     @IBAction private func Cancel(segue: UIStoryboardSegue) {
         
     }
-
+    
+    @IBAction private func exit(segue: UIStoryboardSegue) {
+        let segue = segue.source as? TableViewController
+        prefectureLabel.text = segue?.prefectureName
+    }
 }
 
