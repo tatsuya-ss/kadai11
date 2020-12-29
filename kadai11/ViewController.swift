@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     @IBOutlet private var prefectureLabel: UILabel!
     
@@ -16,8 +16,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction private func exit(segue: UIStoryboardSegue) {
-        let segue = segue.source as? TableViewController
-        prefectureLabel.text = segue?.prefectureName
+        let tableViewController = segue.source as? TableViewController
+        prefectureLabel.text = tableViewController?.prefectureName
     }
 }
-

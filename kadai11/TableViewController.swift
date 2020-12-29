@@ -14,11 +14,10 @@ class TableViewController: UITableViewController {
     private(set) var prefectureName = ""   //private(set)他のクラスから変更はできないけど、読み取ることはできる。
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return prefectures.count
+        prefectures.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath)
         cell.textLabel?.text = prefectures[indexPath.row]
         
@@ -26,9 +25,7 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         prefectureName = prefectures[indexPath.row]
         performSegue(withIdentifier: "exit", sender: nil)
-        
     }
 }
