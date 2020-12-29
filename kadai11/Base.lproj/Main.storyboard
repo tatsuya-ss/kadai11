@@ -16,29 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="SDU-So-0tS">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SDU-So-0tS">
                                 <rect key="frame" x="61" y="101" width="314" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="都道府県" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggf-za-faF">
-                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="都道府県" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggf-za-faF">
+                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QO-6n-Dgq">
-                                        <rect key="frame" x="129.5" y="0.0" width="52" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QO-6n-Dgq">
+                                        <rect key="frame" x="111.5" y="0.0" width="91" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogw-YL-cEz">
-                                        <rect key="frame" x="241.5" y="0.0" width="72.5" height="30"/>
+                                        <rect key="frame" x="222.5" y="0.0" width="91.5" height="30"/>
                                         <state key="normal" title="変更"/>
                                         <connections>
                                             <segue destination="3Xa-AD-HDB" kind="presentation" modalPresentationStyle="fullScreen" id="hhe-sO-eLd"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="2QO-6n-Dgq" firstAttribute="width" secondItem="Ogw-YL-cEz" secondAttribute="width" id="0ON-ed-DQV"/>
+                                    <constraint firstItem="Ogw-YL-cEz" firstAttribute="width" secondItem="ggf-za-faF" secondAttribute="width" id="kto-pT-Eqk"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -47,6 +51,7 @@
                             <constraint firstItem="SDU-So-0tS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="3Oo-yB-duj"/>
                             <constraint firstItem="SDU-So-0tS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ds8-bz-BA9"/>
                             <constraint firstItem="SDU-So-0tS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="OXP-wb-mG1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SDU-So-0tS" secondAttribute="trailing" constant="50" id="i06-lL-uOE"/>
                         </constraints>
                     </view>
                 </viewController>
